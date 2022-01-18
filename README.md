@@ -41,3 +41,24 @@ pytest -q test_example.py
 ```
 
 - how to properly assert that an exception gets raised in pytest? Check test_raises.py
+
+- you can select tests based on marking, node ID or based on names
+- by name:
+```
+pytest test_multitests.py -k answer1
+```
+- or can use marking:
+```
+pytest test_multitests.py -m one
+```
+- check all registered markers:
+```
+pytest --markers
+```
+Node IDs are of the form module.py::class::method or module.py::function. 
+
+- run test by node id:
+```
+pytest test_multitests.py::test_answer1
+```
+- use @pytest.mark.parametrize to run multiple arguments on a test, see test_parametrized.py
