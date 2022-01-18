@@ -1,14 +1,14 @@
 # Example.
 import pytest
 
-def whatever():
-    return 9/0
+# def whatever():
+#     return 9/0
 
-def test_whatever():
-    try:
-        whatever()
-    except ZeroDivisionError as exc:
-        pytest.fail(exc, pytrace=True)
+# def test_whatever():
+#     try:
+#         whatever()
+#     except ZeroDivisionError as exc:
+#         pytest.fail(exc, pytrace=True)
 
 # How to make pytest print traceback, so I would see where in the whatever function an exception was raised?
 #%%
@@ -20,7 +20,7 @@ def test_passes():
         x = 1 / 0
 
 def test_passes_without_info():
-    with pytest.raises(Exception):
+    with pytest.raises(ZeroDivisionError):
         x = 1 / 0
 
 def test_fails():
