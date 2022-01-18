@@ -1,9 +1,10 @@
-### Notes on Pytest library
+## Notes on Pytest library
 
 **pytest** is a framework that makes building simple and scalable tests easy
 
 - pytest will run all files of the form test_*.py or *_test.py in the current directory and its subdirectories
 
+### What is a test?
 In the simplest terms, a test is meant to look at the result of a particular behavior, and make sure that result aligns with what you would expect. Behavior is not something that can be empirically measured, which is why writing tests can be challenging.
 
 “Behavior” is the way in which some system acts in response to a particular situation and/or stimuli. But exactly how or why something is done is not quite as important as what was done.
@@ -28,7 +29,7 @@ Cleanup is where the test picks up after itself, so other tests aren’t being a
 
 At it’s core, the test is ultimately the act and assert steps, with the arrange step only providing the context. Behavior exists between act and assert.
 
-### Commands
+## Commands
 
 - run all test_*.py and *_test.py files:
 ```
