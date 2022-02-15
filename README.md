@@ -67,3 +67,8 @@ Node IDs are of the form module.py::class::method or module.py::function.
 pytest test_multitests.py::test_answer1
 ```
 - use @pytest.mark.parametrize to run multiple arguments on a test, see test_parametrized.py
+
+- Use the --durations option to the pytest command to include a duration report in your test results. --durations expects an integer value n and will report the slowest n number of tests.
+```
+pytest --durations=3
+```
